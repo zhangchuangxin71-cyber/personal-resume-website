@@ -201,8 +201,9 @@
 
 .home-hero-contact-link {
   display: grid;
-  gap: 4px;
+  gap: 8px;
   min-width: 0;
+  min-width: 236px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--surface);
@@ -212,6 +213,17 @@
 }
 
 .home-hero-contact-link:hover { color: var(--accent); transform: translateY(-1px); }
+.home-hero-contact-topline { display: flex; align-items: center; gap: 8px; }
+.home-hero-contact-icon {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface) 82%);
+  color: var(--accent);
+  flex: none;
+}
 .home-hero-contact-label { color: var(--text-soft); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
 .home-hero-contact-value { font-size: 14px; font-weight: 620; letter-spacing: -0.02em; }
 

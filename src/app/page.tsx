@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, ArrowRight, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
+import { ArrowDown, ArrowRight, EnvelopeSimple, GithubLogo } from "@phosphor-icons/react/dist/ssr";
 import { HeroSystemField } from "@/components/hero-system-field";
 import { ProjectPreview } from "@/components/project-preview";
 import { HeroAtmosphere } from "@/components/reactbits-effects";
@@ -48,12 +48,22 @@ export default function HomePage() {
             </HeroReveal>
             <HeroReveal className="home-hero-contact" delay={0.33}>
               <Link className="home-hero-contact-link" href={`mailto:${siteConfig.contactEmail}`}>
-                <span className="home-hero-contact-label">邮箱</span>
+                <span className="home-hero-contact-topline">
+                  <span className="home-hero-contact-icon" aria-hidden="true">
+                    <EnvelopeSimple size={14} />
+                  </span>
+                  <span className="home-hero-contact-label">邮箱</span>
+                </span>
                 <span className="home-hero-contact-value">{siteConfig.contactEmail}</span>
               </Link>
               {siteConfig.githubUrl ? (
                 <a className="home-hero-contact-link" href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
-                  <span className="home-hero-contact-label">GitHub</span>
+                  <span className="home-hero-contact-topline">
+                    <span className="home-hero-contact-icon" aria-hidden="true">
+                      <GithubLogo size={14} />
+                    </span>
+                    <span className="home-hero-contact-label">GitHub</span>
+                  </span>
                   <span className="home-hero-contact-value">zhangchuangxin71-cyber</span>
                 </a>
               ) : null}
