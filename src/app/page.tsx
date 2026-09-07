@@ -30,8 +30,10 @@ export default function HomePage() {
             </HeroReveal>
             <HeroReveal delay={0.2}>
               <p className="home-hero-description">
-                做过能上线的 AI 产品，不做只会演示的 <span className="home-hero-accent">Demo。</span>
-                {siteConfig.description}我关注的是从模型调用、证据溯源到可恢复交付的完整闭环。
+                我做的是能上线、能验证、能持续交付的 AI 产品，而不是只能演示的{" "}
+                <span className="home-hero-accent">Demo。</span>
+                专注 Agent 原生应用、多模态视频理解与结构化文档检索，把模型能力真正接入产品流程，
+                打通从调用、证据、状态到恢复与交付的完整闭环。
               </p>
             </HeroReveal>
             <HeroReveal className="home-hero-actions" delay={0.27}>
