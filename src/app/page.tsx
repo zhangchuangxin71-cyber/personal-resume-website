@@ -126,9 +126,6 @@ export default function HomePage() {
               联系我 <ArrowRight size={15} />
             </Link>
           </Reveal>
-          <p className="home-project-intro">
-            先看三个最能代表我能力的项目。每个卡片只保留结论和成果，完整技术拆解放在项目详情页里。
-          </p>
           <div className="home-project-list">
             {spotlightProjects.map((project, index) => (
               <Reveal key={project.slug} delay={staggerDelay(index)} variant={index === 0 ? "media" : "row"}>
@@ -144,7 +141,6 @@ export default function HomePage() {
             <div className="home-other-work">
               <Reveal className="home-other-work-heading">
                 <h3>其他项目</h3>
-                <p>保留两个补充项目，避免首页信息过载。</p>
               </Reveal>
               <div className="home-other-work-grid">
                 {supportingProjects.map((project, index) => (
@@ -185,7 +181,6 @@ export default function HomePage() {
             <p className="resume-kicker">Printable CV</p>
             <h2>{siteConfig.name}</h2>
             <p>{siteConfig.role}</p>
-            <p className="resume-header-note">一页版简历，适合打印投递；详细案例仍在上方项目区。</p>
             <div className="resume-contact">
               <a href={`mailto:${siteConfig.contactEmail}`}>
                 <EnvelopeSimple size={14} /> {siteConfig.contactEmail}
@@ -324,7 +319,7 @@ export default function HomePage() {
               <a href={siteConfig.resumePdf} download>
                 <span className="contact-link-copy">
                   <span className="contact-link-title">简历 PDF</span>
-                  <span className="contact-link-meta">下载一页版简历</span>
+                  <span className="contact-link-meta">PDF</span>
                 </span>
                 <ArrowDown size={16} />
               </a>

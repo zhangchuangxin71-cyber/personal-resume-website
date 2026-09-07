@@ -253,11 +253,9 @@
 
 .home-about { border-bottom: 1px solid var(--line-strong); }
 .home-projects { border-bottom: 1px solid var(--line-strong); padding-block: clamp(88px, 11vw, 148px); }
-.home-project-intro { max-width: 64ch; margin: 16px 0 0; color: var(--text-muted); font-size: 15px; line-height: 1.75; }
 .home-other-work { margin-top: 54px; }
 .home-other-work-heading { display: grid; gap: 10px; margin-bottom: 20px; }
 .home-other-work-heading h3 { margin: 0; font-size: 13px; color: var(--accent); font-family: var(--font-mono); font-weight: 500; }
-.home-other-work-heading p { max-width: 60ch; margin: 0; color: var(--text-muted); font-size: 14px; line-height: 1.7; }
 .home-other-work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .home-other-work-item { display: grid; gap: 10px; min-height: 160px; border-top: 1px solid var(--line-strong); padding: 20px 0 18px; transition: transform 180ms ease, color 180ms ease; }
 .home-other-work-item:hover { transform: translateY(-2px); color: var(--accent); }
@@ -407,7 +405,6 @@
 .resume-header h1,
 .resume-header h2 { margin: 0; font-size: clamp(54px, 8vw, 110px); letter-spacing: -0.07em; line-height: 0.85; }
 .resume-header > div > p { margin: 24px 0 0; color: var(--accent); font-family: var(--font-mono); font-size: 11px; }
-.resume-header-note { max-width: 52ch; margin: 14px 0 0; color: var(--text-muted); font-family: var(--font-body); font-size: 14px; line-height: 1.7; }
 .resume-contact { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 24px; color: var(--text-muted); font-family: var(--font-mono); font-size: 10px; }
 .resume-contact a:hover { color: var(--accent); }
 .resume-contact a { display: inline-flex; align-items: center; gap: 7px; }
