@@ -11,6 +11,7 @@ import { awards, education, internships, resumeProjects, siteConfig, skillGroups
 
 const spotlightProjects = projects.slice(0, 3);
 const supportingProjects = projects.slice(3);
+const githubDisplay = siteConfig.githubUrl?.replace(/^https?:\/\//, "") ?? "github.com/zhangchuangxin71-cyber";
 
 export default function HomePage() {
   return (
@@ -47,26 +48,27 @@ export default function HomePage() {
               </a>
             </HeroReveal>
             <HeroReveal className="home-hero-contact" delay={0.33}>
-              <a className="home-hero-contact-link" href={`mailto:${siteConfig.contactEmail}`}>
-                <span className="home-hero-contact-topline">
-                  <span className="home-hero-contact-icon" aria-hidden="true">
-                    <EnvelopeSimple size={14} />
+              <div className="home-hero-contact-label-row">
+                <span className="home-hero-contact-caption">联系信息</span>
+              </div>
+              <div className="home-hero-contact-links">
+                <a className="home-hero-contact-link" href={`mailto:${siteConfig.contactEmail}`}>
+                  <EnvelopeSimple size={14} />
+                  <span className="home-hero-contact-copy">
+                    <span className="home-hero-contact-label">邮箱</span>
+                    <span className="home-hero-contact-value">{siteConfig.contactEmail}</span>
                   </span>
-                  <span className="home-hero-contact-label">邮箱</span>
-                </span>
-                <span className="home-hero-contact-value">{siteConfig.contactEmail}</span>
-              </a>
-              {siteConfig.githubUrl ? (
-                <a className="home-hero-contact-link" href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
-                  <span className="home-hero-contact-topline">
-                    <span className="home-hero-contact-icon" aria-hidden="true">
-                      <GithubLogo size={14} />
-                    </span>
-                    <span className="home-hero-contact-label">GitHub</span>
-                  </span>
-                  <span className="home-hero-contact-value">zhangchuangxin71-cyber</span>
                 </a>
-              ) : null}
+                {siteConfig.githubUrl ? (
+                  <a className="home-hero-contact-link" href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
+                    <GithubLogo size={14} />
+                    <span className="home-hero-contact-copy">
+                      <span className="home-hero-contact-label">GitHub</span>
+                      <span className="home-hero-contact-value">{githubDisplay}</span>
+                    </span>
+                  </a>
+                ) : null}
+              </div>
             </HeroReveal>
           </div>
 
@@ -195,6 +197,11 @@ export default function HomePage() {
               <a href={`mailto:${siteConfig.contactEmail}`}>
                 <EnvelopeSimple size={14} /> {siteConfig.contactEmail}
               </a>
+              {siteConfig.githubUrl ? (
+                <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
+                  <GithubLogo size={14} /> {githubDisplay}
+                </a>
+              ) : null}
             </div>
           </div>
           <div className="resume-actions print-hidden">
@@ -311,7 +318,7 @@ export default function HomePage() {
               <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
                 <span className="contact-link-copy">
                   <span className="contact-link-title">GitHub</span>
-                  <span className="contact-link-meta">zhangchuangxin71-cyber</span>
+                  <span className="contact-link-meta">{githubDisplay}</span>
                 </span>
                 <ArrowRight size={16} />
               </a>
