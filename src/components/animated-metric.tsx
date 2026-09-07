@@ -44,7 +44,7 @@ export function AnimatedMetric({ value, duration = motionTokens.metric.duration 
   const metric = useMemo(() => parseMetric(value), [value]);
   const reduce = useReducedMotion();
   const inView = useInView(ref, { once: true, amount: 0.6 });
-  const [display, setDisplay] = useState(() => (metric ? formatMetric(metric, 0) : value));
+  const [display, setDisplay] = useState(value);
   const visibleValue = !metric || reduce ? value : display;
 
   useEffect(() => {
