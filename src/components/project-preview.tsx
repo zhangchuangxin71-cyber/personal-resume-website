@@ -58,7 +58,11 @@ export function ProjectPreview({
       whileTap={reduce ? undefined : { scale: 0.993 }}
       transition={{ duration: motionTokens.micro.duration, ease: motionTokens.easeOut }}
     >
-      <Link href={href ?? `/projects/${project.slug}`} className="project-preview-link">
+      <Link
+        href={href ?? `/projects/${project.slug}`}
+        className="project-preview-link"
+        aria-label={`${project.title} 完整案例`}
+      >
         <span className="project-preview-spotlight" aria-hidden="true" />
         <div className="project-preview-media" ref={mediaRef}>
           <motion.div
@@ -89,6 +93,7 @@ export function ProjectPreview({
           <p className="project-preview-status">
             {statusLabels[project.status]}{project.openSource ? " · 开源" : ""}
           </p>
+          <p className="project-preview-hint">点开进入完整案例</p>
           <div className="project-preview-heading">
             <h3>{project.title}</h3>
             <span aria-hidden="true"><ArrowUpRight size={22} /></span>

@@ -47,7 +47,7 @@ export default function HomePage() {
               </a>
             </HeroReveal>
             <HeroReveal className="home-hero-contact" delay={0.33}>
-              <Link className="home-hero-contact-link" href={`mailto:${siteConfig.contactEmail}`}>
+              <a className="home-hero-contact-link" href={`mailto:${siteConfig.contactEmail}`}>
                 <span className="home-hero-contact-topline">
                   <span className="home-hero-contact-icon" aria-hidden="true">
                     <EnvelopeSimple size={14} />
@@ -55,7 +55,7 @@ export default function HomePage() {
                   <span className="home-hero-contact-label">邮箱</span>
                 </span>
                 <span className="home-hero-contact-value">{siteConfig.contactEmail}</span>
-              </Link>
+              </a>
               {siteConfig.githubUrl ? (
                 <a className="home-hero-contact-link" href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
                   <span className="home-hero-contact-topline">
