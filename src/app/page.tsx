@@ -182,8 +182,10 @@ export default function HomePage() {
       <section id="resume" className="home-resume">
         <div className="container-shell resume-header">
           <div>
+            <p className="resume-kicker">Printable CV</p>
             <h2>{siteConfig.name}</h2>
             <p>{siteConfig.role}</p>
+            <p className="resume-header-note">一页版简历，适合打印投递；详细案例仍在上方项目区。</p>
             <div className="resume-contact">
               <a href={`mailto:${siteConfig.contactEmail}`}>
                 <EnvelopeSimple size={14} /> {siteConfig.contactEmail}
@@ -196,7 +198,7 @@ export default function HomePage() {
           <div className="resume-actions print-hidden">
             {siteConfig.resumePdf ? (
               <a className="button button-primary" href={siteConfig.resumePdf} download>
-                下载 PDF
+                打开简历 PDF
                 <ArrowDown size={17} />
               </a>
             ) : null}
