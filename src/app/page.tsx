@@ -29,6 +29,21 @@ export default function HomePage() {
             <HeroReveal delay={0.14}>
               <p className="home-hero-title">{siteConfig.role}</p>
             </HeroReveal>
+            <HeroReveal delay={0.17}>
+              <div className="home-hero-inline-contact">
+                <span className="home-hero-inline-contact-label">邮箱</span>
+                <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
+                <span className="home-hero-inline-contact-sep">·</span>
+                <span className="home-hero-inline-contact-label">GitHub</span>
+                {siteConfig.githubUrl ? (
+                  <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
+                    {githubDisplay}
+                  </a>
+                ) : (
+                  <span>{githubDisplay}</span>
+                )}
+              </div>
+            </HeroReveal>
             <HeroReveal delay={0.2}>
               <p className="home-hero-description">
                 我做的是能上线、能验证、能持续交付的 AI 产品，而不是只能演示的{" "}
@@ -46,29 +61,6 @@ export default function HomePage() {
                 下载简历
                 <ArrowDown size={17} />
               </a>
-            </HeroReveal>
-            <HeroReveal className="home-hero-contact" delay={0.33}>
-              <div className="home-hero-contact-label-row">
-                <span className="home-hero-contact-caption">联系信息</span>
-              </div>
-              <div className="home-hero-contact-links">
-                <a className="home-hero-contact-link" href={`mailto:${siteConfig.contactEmail}`}>
-                  <EnvelopeSimple size={14} />
-                  <span className="home-hero-contact-copy">
-                    <span className="home-hero-contact-label">邮箱</span>
-                    <span className="home-hero-contact-value">{siteConfig.contactEmail}</span>
-                  </span>
-                </a>
-                {siteConfig.githubUrl ? (
-                  <a className="home-hero-contact-link" href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
-                    <GithubLogo size={14} />
-                    <span className="home-hero-contact-copy">
-                      <span className="home-hero-contact-label">GitHub</span>
-                      <span className="home-hero-contact-value">{githubDisplay}</span>
-                    </span>
-                  </a>
-                ) : null}
-              </div>
             </HeroReveal>
           </div>
 
