@@ -10,6 +10,7 @@ playwright-report
 .env*
 !.env.example
 /11.png
+/11.gif
 /12.png
 /78c7b44b-96a2-49c7-a56f-11016130ca88.png
 /微信视频2026-08-12_184958_206.mp4
