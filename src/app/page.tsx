@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowRight, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import { HeroSystemField } from "@/components/hero-system-field";
 import { ProjectPreview } from "@/components/project-preview";
-import { GlitchLabel, HeroAtmosphere } from "@/components/reactbits-effects";
+import { HeroAtmosphere } from "@/components/reactbits-effects";
 import { HeroReveal, Reveal } from "@/components/reveal";
 import { PrintButton } from "@/components/print-button";
 import { staggerDelay } from "@/lib/motion";
@@ -20,9 +20,7 @@ export default function HomePage() {
         <div className="container-shell home-hero-grid">
           <div className="home-hero-copy">
             <HeroReveal delay={0.02}>
-              <p className="home-role">
-                <GlitchLabel text={siteConfig.role} />
-              </p>
+              <p className="home-role">{siteConfig.role}</p>
             </HeroReveal>
             <HeroReveal delay={0.08}>
               <h1 className="home-hero-name">{siteConfig.name}</h1>

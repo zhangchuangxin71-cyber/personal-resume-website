@@ -23,6 +23,7 @@ export function HeroAtmosphere() {
       <span className="hero-orb hero-orb-a" />
       <span className="hero-orb hero-orb-b" />
       <span className="hero-orb hero-orb-c" />
+      <span className="hero-orb hero-orb-d" />
       <span className="hero-grid" />
       <span className="hero-scan" />
     </div>

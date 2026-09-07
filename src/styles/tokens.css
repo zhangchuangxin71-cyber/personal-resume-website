@@ -1,21 +1,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --page: #101416;
-  --surface: #171c1e;
-  --surface-raised: #1d2325;
-  --text: #d1cec5;
+  --page: #0f1412;
+  --surface: #161c19;
+  --surface-raised: #1d251f;
+  --text: #edf1e8;
   --text-primary: var(--text);
-  --text-muted: #858984;
-  --text-soft: #666c6c;
-  --line: #2d3435;
-  --line-strong: #545c5c;
-  --accent: #a84632;
-  --accent-hover: #bd5842;
-  --accent-text: #eee8dc;
-  --header: rgb(16 20 22 / 0.96);
-  --paper-shadow: 0 24px 60px rgb(0 0 0 / 0.24);
-  --radius-control: 2px;
+  --text-muted: #97a093;
+  --text-soft: #6e776f;
+  --line: #2a352f;
+  --line-strong: #46554b;
+  --accent: #bfd97d;
+  --accent-hover: #d2e48d;
+  --accent-text: #182014;
+  --header: rgb(15 20 18 / 0.92);
+  --paper-shadow: 0 28px 60px rgb(0 0 0 / 0.28);
+  --radius-control: 10px;
   --font-body: "Inter", "IBM Plex Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-display: "Noto Sans SC", "Inter", "IBM Plex Sans", "PingFang SC", sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
@@ -24,18 +24,18 @@
 }
 
 .light {
-  --page: #e4e2da;
-  --surface: #ece9e1;
-  --surface-raised: #f4f1e8;
-  --text: #1d2323;
+  --page: #f4f0e7;
+  --surface: #fbf7ee;
+  --surface-raised: #ffffff;
+  --text: #1f2623;
   --text-primary: var(--text);
-  --text-muted: #626966;
-  --text-soft: #7b817d;
-  --line: #b8bbb4;
-  --line-strong: #747c78;
-  --accent: #8f392d;
-  --accent-hover: #743027;
-  --accent-text: #f2eee7;
-  --header: rgb(228 226 218 / 0.96);
-  --paper-shadow: 0 24px 60px rgb(52 48 39 / 0.12);
+  --text-muted: #66706a;
+  --text-soft: #7d867f;
+  --line: #cfd2c8;
+  --line-strong: #aab0a4;
+  --accent: #84ab52;
+  --accent-hover: #6f9442;
+  --accent-text: #f4f7ef;
+  --header: rgb(244 240 231 / 0.94);
+  --paper-shadow: 0 24px 60px rgb(41 45 35 / 0.12);
 }
