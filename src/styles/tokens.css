@@ -16,9 +16,9 @@
   --header: rgb(16 20 22 / 0.96);
   --paper-shadow: 0 24px 60px rgb(0 0 0 / 0.24);
   --radius-control: 2px;
-  --font-body: var(--font-plex-sans), var(--font-noto-sans-sc), "PingFang SC", "Microsoft YaHei", sans-serif;
-  --font-display: var(--font-noto-sans-sc), var(--font-plex-sans), "PingFang SC", sans-serif;
-  --font-mono: var(--font-plex-mono), "SFMono-Regular", Consolas, monospace;
+  --font-body: "Inter", "IBM Plex Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-display: "Noto Sans SC", "Inter", "IBM Plex Sans", "PingFang SC", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
   --content-width: 1376px;
   --header-height: 64px;
 }

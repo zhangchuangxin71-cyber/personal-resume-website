@@ -1,33 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/lib/site";
-
-const plexSans = IBM_Plex_Sans({
-  variable: "--font-plex-sans",
-  weight: "variable",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const notoSansSC = Noto_Sans_SC({
-  variable: "--font-noto-sans-sc",
-  weight: "variable",
-  display: "swap",
-  preload: false,
-  fallback: ["PingFang SC", "Microsoft YaHei", "sans-serif"],
-  adjustFontFallback: false,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -79,7 +55,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="zh-CN" suppressHydrationWarning>
-      <body className={`${plexSans.variable} ${plexMono.variable} ${notoSansSC.variable}`}>
+      <body>
         <Providers>
           <a className="skip-link" href="#main-content">跳到主要内容</a>
           <SiteHeader />

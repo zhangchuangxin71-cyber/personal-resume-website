@@ -104,6 +104,10 @@ export function ProjectPreview({
           <p className="project-preview-tech" aria-label="技术栈">
             {project.technologies.slice(0, variant === "lead" ? 5 : 4).join(" / ")}
           </p>
+          <span className="project-preview-cta" aria-hidden="true">
+            查看案例
+            <ArrowUpRight size={15} />
+          </span>
         </div>
       </Link>
     </motion.article>
