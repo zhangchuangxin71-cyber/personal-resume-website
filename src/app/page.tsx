@@ -178,7 +178,6 @@ export default function HomePage() {
       <section id="resume" className="home-resume">
         <div className="container-shell resume-header">
           <div>
-            <p className="resume-kicker">Printable CV</p>
             <h2>{siteConfig.name}</h2>
             <p>{siteConfig.role}</p>
             <div className="resume-contact">
@@ -294,9 +293,7 @@ export default function HomePage() {
         <div className="container-shell contact-grid">
           <div>
             <h2>联系</h2>
-            <p>
-              优先通过 GitHub、邮箱或简历 PDF 联系我。
-            </p>
+            <p>GitHub / 邮箱 / PDF</p>
           </div>
           <div className="contact-links">
             {siteConfig.githubUrl ? (
