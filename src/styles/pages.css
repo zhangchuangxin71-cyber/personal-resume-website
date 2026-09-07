@@ -183,7 +183,21 @@
 .contact-grid h2 { margin: 0; font-size: clamp(36px, 5vw, 72px); letter-spacing: -0.05em; line-height: 0.96; }
 .contact-grid p { max-width: 58ch; margin: 22px 0 0; color: var(--text-muted); font-size: 16px; line-height: 1.7; }
 .contact-links { display: grid; gap: 14px; font-family: var(--font-mono); font-size: 11px; }
-.contact-links a { display: inline-flex; align-items: center; gap: 8px; width: fit-content; color: var(--text); }
+.contact-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 15px 0;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+}
+.contact-links a:last-child { border-bottom: 1px solid var(--line); }
+.contact-link-copy { display: grid; gap: 4px; min-width: 0; }
+.contact-link-title { color: var(--text); font-family: var(--font-body); font-size: 16px; letter-spacing: -0.03em; }
+.contact-link-meta { color: var(--text-muted); font-size: 11px; }
+.contact-links a svg { flex: none; }
 .contact-links a:hover { color: var(--accent); }
 
 .project-index-grid {

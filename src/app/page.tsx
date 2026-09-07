@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDown, ArrowRight, EnvelopeSimple, Phone } from "@phosphor-icons/react/dist/ssr";
+import { ArrowDown, ArrowRight, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import { HeroSystemField } from "@/components/hero-system-field";
 import { ProjectPreview } from "@/components/project-preview";
 import { GlitchLabel, HeroAtmosphere } from "@/components/reactbits-effects";
@@ -190,9 +190,6 @@ export default function HomePage() {
               <a href={`mailto:${siteConfig.contactEmail}`}>
                 <EnvelopeSimple size={14} /> {siteConfig.contactEmail}
               </a>
-              <a href={`tel:${siteConfig.phone}`}>
-                <Phone size={14} /> {siteConfig.phone}
-              </a>
             </div>
           </div>
           <div className="resume-actions print-hidden">
@@ -303,19 +300,33 @@ export default function HomePage() {
           <div>
             <h2>联系</h2>
             <p>
-              如果你在找能把 AI 模型、检索系统和产品交互串起来的人，可以直接联系我。
+              优先通过 GitHub、邮箱或简历 PDF 联系我。
             </p>
           </div>
           <div className="contact-links">
-            <a href={`mailto:${siteConfig.contactEmail}`}>
-              <EnvelopeSimple size={16} /> {siteConfig.contactEmail}
-            </a>
-            <a href={`tel:${siteConfig.phone}`}>
-              <Phone size={16} /> {siteConfig.phone}
-            </a>
             {siteConfig.githubUrl ? (
               <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
-                GitHub <ArrowRight size={16} />
+                <span className="contact-link-copy">
+                  <span className="contact-link-title">GitHub</span>
+                  <span className="contact-link-meta">zhangchuangxin71-cyber</span>
+                </span>
+                <ArrowRight size={16} />
+              </a>
+            ) : null}
+            <a href={`mailto:${siteConfig.contactEmail}`}>
+              <span className="contact-link-copy">
+                <span className="contact-link-title">邮箱</span>
+                <span className="contact-link-meta">{siteConfig.contactEmail}</span>
+              </span>
+              <EnvelopeSimple size={16} />
+            </a>
+            {siteConfig.resumePdf ? (
+              <a href={siteConfig.resumePdf} download>
+                <span className="contact-link-copy">
+                  <span className="contact-link-title">简历 PDF</span>
+                  <span className="contact-link-meta">下载一页版简历</span>
+                </span>
+                <ArrowDown size={16} />
               </a>
             ) : null}
           </div>

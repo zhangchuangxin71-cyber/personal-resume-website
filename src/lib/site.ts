@@ -8,7 +8,6 @@ export const siteConfig = {
     "专注 Agent 原生应用、多模态视频理解与结构化文档检索，把模型能力做成可验证、可交付的产品。",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL?.trim() || defaultSiteUrl,
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "3382005503@qq.com",
-  phone: "15937059681",
   githubUrl: process.env.NEXT_PUBLIC_GITHUB_URL ?? "https://github.com/zhangchuangxin71-cyber",
   resumePdf: process.env.NEXT_PUBLIC_RESUME_PDF ?? "/resume.pdf",
   nav: [
