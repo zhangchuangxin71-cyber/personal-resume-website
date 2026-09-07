@@ -2,7 +2,7 @@ const defaultSiteUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_UR
 
 export const siteConfig = {
   name: "张创新",
-  initials: "ZX",
+  initials: "ZCX",
   role: "AI Agent 应用开发工程师",
   description:
     "专注 Agent 原生应用、多模态视频理解与结构化文档检索，把模型能力做成可验证、可交付的产品。",
