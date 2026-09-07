@@ -1,0 +1,41 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --page: #101416;
+  --surface: #171c1e;
+  --surface-raised: #1d2325;
+  --text: #d1cec5;
+  --text-primary: var(--text);
+  --text-muted: #858984;
+  --text-soft: #666c6c;
+  --line: #2d3435;
+  --line-strong: #545c5c;
+  --accent: #a84632;
+  --accent-hover: #bd5842;
+  --accent-text: #eee8dc;
+  --header: rgb(16 20 22 / 0.96);
+  --paper-shadow: 0 24px 60px rgb(0 0 0 / 0.24);
+  --radius-control: 2px;
+  --font-body: var(--font-plex-sans), var(--font-noto-sans-sc), "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-display: var(--font-noto-sans-sc), var(--font-plex-sans), "PingFang SC", sans-serif;
+  --font-mono: var(--font-plex-mono), "SFMono-Regular", Consolas, monospace;
+  --content-width: 1376px;
+  --header-height: 64px;
+}
+
+.light {
+  --page: #e4e2da;
+  --surface: #ece9e1;
+  --surface-raised: #f4f1e8;
+  --text: #1d2323;
+  --text-primary: var(--text);
+  --text-muted: #626966;
+  --text-soft: #7b817d;
+  --line: #b8bbb4;
+  --line-strong: #747c78;
+  --accent: #8f392d;
+  --accent-hover: #743027;
+  --accent-text: #f2eee7;
+  --header: rgb(228 226 218 / 0.96);
+  --paper-shadow: 0 24px 60px rgb(52 48 39 / 0.12);
+}

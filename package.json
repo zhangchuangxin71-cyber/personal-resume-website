@@ -1,0 +1,43 @@
+{
+  "name": "chuangxin-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "WATCHPACK_POLLING=true CHOKIDAR_USEPOLLING=true next dev --webpack -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@content-collections/mdx": "0.2.2",
+    "@content-collections/next": "0.2.10",
+    "@phosphor-icons/react": "^2.1.10",
+    "@tailwindcss/postcss": "^4.1.18",
+    "content-collections": "0.2.1",
+    "gsap": "^3.15.0",
+    "motion": "12.23.27",
+    "next": "16.1.1",
+    "next-themes": "^0.4.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remark-gfm": "^4.0.1",
+    "tailwindcss": "^4.1.18",
+    "zod": "^4.3.5"
+  },
+  "devDependencies": {
+    "@content-collections/core": "^0.13.1",
+    "@playwright/test": "^1.58.2",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.1.1",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

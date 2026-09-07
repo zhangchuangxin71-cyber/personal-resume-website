@@ -1,0 +1,104 @@
+.cubes-shell {
+  --cube-face-color: #171814;
+  position: relative;
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1;
+  place-items: center;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+  perspective: 900px;
+  touch-action: pan-y;
+}
+
+.cubes-shell::before { position: absolute; top: 5%; left: 5%; width: 52px; height: 3px; background: var(--accent); content: ""; pointer-events: none; animation: cube-marker 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite alternate; }
+
+.cubes-scene {
+  display: grid;
+  width: 72%;
+  height: 72%;
+  transform: rotateX(56deg) rotateZ(-34deg) translateZ(0);
+  transform-style: preserve-3d;
+}
+
+.cube {
+  --cube-depth: 14px;
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.cube-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border: var(--cube-face-border);
+  background: var(--cube-face-bg);
+  box-shadow: var(--cube-face-shadow);
+  backface-visibility: hidden;
+}
+
+.cube-face-front {
+  transform: translateZ(calc(var(--cube-depth) / 2));
+}
+
+.cube-face-back {
+  transform: rotateY(180deg) translateZ(calc(var(--cube-depth) / 2));
+}
+
+.cube-face-left {
+  right: auto;
+  width: var(--cube-depth);
+  transform: rotateY(-90deg) translateZ(calc(var(--cube-depth) / 2));
+}
+
+.cube-face-right {
+  left: auto;
+  width: var(--cube-depth);
+  transform: rotateY(90deg) translateZ(calc(var(--cube-depth) / 2));
+}
+
+.cube-face-top {
+  bottom: auto;
+  height: var(--cube-depth);
+  transform: rotateX(90deg) translateZ(calc(var(--cube-depth) / 2));
+}
+
+.cube-face-bottom {
+  top: auto;
+  height: var(--cube-depth);
+  transform: rotateX(-90deg) translateZ(calc(var(--cube-depth) / 2));
+}
+
+.light .cubes-shell {
+  --cube-face-color: #dedbd1;
+  background: transparent;
+  box-shadow: none;
+}
+
+@keyframes cube-marker { from { transform: scaleX(0.35); transform-origin: left; } to { transform: scaleX(1); transform-origin: left; } }
+
+@media (max-width: 767px), (hover: none), (pointer: coarse) {
+  .cubes-shell {
+    pointer-events: none;
+  }
+
+  .cubes-scene {
+    width: 68%;
+    height: 68%;
+  }
+
+  .cube {
+    --cube-depth: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cube {
+    transform: none !important;
+  }
+}
