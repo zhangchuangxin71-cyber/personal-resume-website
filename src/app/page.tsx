@@ -3,7 +3,7 @@ import { ArrowDown, ArrowRight, EnvelopeSimple } from "@phosphor-icons/react/dis
 import { HeroSystemField } from "@/components/hero-system-field";
 import { ProjectPreview } from "@/components/project-preview";
 import { GlitchLabel, HeroAtmosphere } from "@/components/reactbits-effects";
-import { HeroReveal, MaskedTextReveal, Reveal } from "@/components/reveal";
+import { HeroReveal, Reveal } from "@/components/reveal";
 import { PrintButton } from "@/components/print-button";
 import { staggerDelay } from "@/lib/motion";
 import { projects } from "@/lib/projects";
@@ -24,15 +24,15 @@ export default function HomePage() {
                 <GlitchLabel text={siteConfig.role} />
               </p>
             </HeroReveal>
-            <MaskedTextReveal
-              delay={0.07}
-              lines={[
-                "做过能上线的 AI 产品，",
-                <span key="product-line">不做只会演示的 <span className="home-hero-accent">Demo。</span></span>,
-              ]}
-            />
+            <HeroReveal delay={0.08}>
+              <h1 className="home-hero-name">{siteConfig.name}</h1>
+            </HeroReveal>
+            <HeroReveal delay={0.14}>
+              <p className="home-hero-title">{siteConfig.role}</p>
+            </HeroReveal>
             <HeroReveal delay={0.2}>
               <p className="home-hero-description">
+                做过能上线的 AI 产品，不做只会演示的 <span className="home-hero-accent">Demo。</span>
                 {siteConfig.description}我关注的是从模型调用、证据溯源到可恢复交付的完整闭环。
               </p>
             </HeroReveal>

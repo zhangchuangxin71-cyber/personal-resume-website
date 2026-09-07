@@ -1,7 +1,8 @@
 @media (max-width: 1100px) {
   .brand-role { display: none; }
   .home-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(350px, 0.84fr); gap: 38px; }
-  .home-hero-copy h1 { font-size: clamp(50px, 5.6vw, 66px); }
+  .home-hero-name { font-size: clamp(62px, 6vw, 96px); }
+  .home-hero-title { font-size: clamp(22px, 2.2vw, 32px); }
   .project-preview-wide .project-preview-link { grid-template-columns: minmax(0, 1.15fr) minmax(290px, 0.85fr); }
   .project-hero-copy { gap: 42px; }
 }
@@ -47,9 +48,10 @@
   .page-intro p { max-width: 46ch; }
 
   .home-hero-grid { min-height: auto; gap: 58px; padding-block: 64px 72px; }
-  .home-role { margin-bottom: 22px; }
-  .home-hero-copy h1 { font-size: clamp(36px, 8.8vw, 42px); line-height: 1.02; }
-  .home-hero-description { margin-top: 28px; font-size: 15px; }
+  .home-role { margin-bottom: 18px; }
+  .home-hero-name { font-size: clamp(42px, 12vw, 68px); line-height: 0.95; }
+  .home-hero-title { font-size: clamp(18px, 5.6vw, 26px); margin-top: 12px; }
+  .home-hero-description { margin-top: 24px; font-size: 15px; }
   .hero-system-field { min-height: 410px; }
   .expertise-field-label { left: 0; }
   .expertise-field-list { inset: 17% 0 7%; }
