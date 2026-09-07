@@ -91,19 +91,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="home-about">
-        <div className="container-shell about-grid">
-          <Reveal className="about-section-title">
-            <h2>工作原则</h2>
+      <section id="experience" className="home-experience">
+        <div className="container-shell experience-grid">
+          <Reveal className="home-section-heading">
+            <h2>实习经历</h2>
           </Reveal>
-          <div className="about-rows about-principles">
-            {workingPrinciples.map((item, index) => (
-              <Reveal key={item.title} className="about-row" delay={staggerDelay(index)} variant="row">
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </Reveal>
-            ))}
-          </div>
+          {internships.map((internship) => (
+            <Reveal key={internship.company} className="experience-card">
+              <div className="experience-heading">
+                <div>
+                  <h3>{internship.company}</h3>
+                  <p>{internship.role}</p>
+                </div>
+                <span>{internship.period}</span>
+              </div>
+              <div className="experience-projects">
+                {internship.projects.map((project) => (
+                  <article key={project.title}>
+                    <h4>{project.title}</h4>
+                    <p>{project.body}</p>
+                  </article>
+                ))}
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
@@ -152,30 +163,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="experience" className="home-experience">
-        <div className="container-shell experience-grid">
-          <Reveal className="home-section-heading">
-            <h2>实习经历</h2>
+      <section id="about" className="home-about">
+        <div className="container-shell about-grid">
+          <Reveal className="about-section-title">
+            <h2>工作原则</h2>
           </Reveal>
-          {internships.map((internship) => (
-            <Reveal key={internship.company} className="experience-card">
-              <div className="experience-heading">
-                <div>
-                  <h3>{internship.company}</h3>
-                  <p>{internship.role}</p>
-                </div>
-                <span>{internship.period}</span>
-              </div>
-              <div className="experience-projects">
-                {internship.projects.map((project) => (
-                  <article key={project.title}>
-                    <h4>{project.title}</h4>
-                    <p>{project.body}</p>
-                  </article>
-                ))}
-              </div>
-            </Reveal>
-          ))}
+          <div className="about-rows about-principles">
+            {workingPrinciples.map((item, index) => (
+              <Reveal key={item.title} className="about-row" delay={staggerDelay(index)} variant="row">
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
