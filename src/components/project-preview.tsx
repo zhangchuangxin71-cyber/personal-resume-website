@@ -37,11 +37,15 @@ export function ProjectPreview({
   const moveImage = (event: React.PointerEvent<HTMLElement>) => {
     if (reduce || event.pointerType === "touch") return;
     const rect = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty("--spot-x", `${event.clientX - rect.left}px`);
+    event.currentTarget.style.setProperty("--spot-y", `${event.clientY - rect.top}px`);
+    event.currentTarget.style.setProperty("--spot-opacity", "1");
     imageX.set(((event.clientX - rect.left) / rect.width - 0.5) * -16);
     imageY.set(((event.clientY - rect.top) / rect.height - 0.5) * -12);
   };
 
   const resetImage = () => {
+    mediaRef.current?.style.setProperty("--spot-opacity", "0");
     imageX.set(0);
     imageY.set(0);
   };
@@ -55,6 +59,7 @@ export function ProjectPreview({
       transition={{ duration: motionTokens.micro.duration, ease: motionTokens.easeOut }}
     >
       <Link href={href ?? `/projects/${project.slug}`} className="project-preview-link">
+        <span className="project-preview-spotlight" aria-hidden="true" />
         <div className="project-preview-media" ref={mediaRef}>
           <motion.div
             className="project-preview-image-wrap"

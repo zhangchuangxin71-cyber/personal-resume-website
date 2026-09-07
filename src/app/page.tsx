@@ -4,6 +4,7 @@ import { Cubes } from "@/components/cubes";
 import { HeroSystemField } from "@/components/hero-system-field";
 import { ProjectCaseStudy } from "@/components/project-case-study";
 import { ProjectPreview } from "@/components/project-preview";
+import { GlitchLabel, HeroAtmosphere } from "@/components/reactbits-effects";
 import { HeroReveal, MaskedTextReveal, Reveal } from "@/components/reveal";
 import { PrintButton } from "@/components/print-button";
 import { staggerDelay } from "@/lib/motion";
@@ -14,10 +15,13 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <section className="home-hero" id="top">
+        <HeroAtmosphere />
         <div className="container-shell home-hero-grid">
           <div className="home-hero-copy">
             <HeroReveal delay={0.02}>
-              <p className="home-role">{siteConfig.role}</p>
+              <p className="home-role">
+                <GlitchLabel text={siteConfig.role} />
+              </p>
             </HeroReveal>
             <MaskedTextReveal
               delay={0.07}
