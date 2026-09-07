@@ -46,15 +46,16 @@ export default function HomePage() {
                 <ArrowDown size={17} />
               </a>
             </HeroReveal>
-            <HeroReveal className="home-hero-meta" delay={0.33}>
-              <Link href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</Link>
+            <HeroReveal className="home-hero-contact" delay={0.33}>
+              <Link className="home-hero-contact-link" href={`mailto:${siteConfig.contactEmail}`}>
+                <span className="home-hero-contact-label">邮箱</span>
+                <span className="home-hero-contact-value">{siteConfig.contactEmail}</span>
+              </Link>
               {siteConfig.githubUrl ? (
-                <>
-                  <span>·</span>
-                  <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
-                    GitHub
-                  </a>
-                </>
+                <a className="home-hero-contact-link" href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
+                  <span className="home-hero-contact-label">GitHub</span>
+                  <span className="home-hero-contact-value">zhangchuangxin71-cyber</span>
+                </a>
               ) : null}
             </HeroReveal>
           </div>

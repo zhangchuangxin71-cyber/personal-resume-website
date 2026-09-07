@@ -192,8 +192,28 @@
   border-color: var(--line-strong);
   background: color-mix(in srgb, var(--surface) 84%, var(--accent) 16%);
 }
-.home-hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; color: var(--text-soft); font-family: var(--font-mono); font-size: 10px; }
-.home-hero-meta a:hover { color: var(--accent); }
+.home-hero-contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.home-hero-contact-link {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  padding: 14px 16px;
+  color: var(--text);
+  box-shadow: var(--paper-shadow);
+}
+
+.home-hero-contact-link:hover { color: var(--accent); transform: translateY(-1px); }
+.home-hero-contact-label { color: var(--text-soft); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.home-hero-contact-value { font-size: 14px; font-weight: 620; letter-spacing: -0.02em; }
 
 .home-system-visual { min-width: 0; align-self: center; }
 
