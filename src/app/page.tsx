@@ -27,12 +27,14 @@ export default function HomePage() {
             <MaskedTextReveal
               delay={0.07}
               lines={[
-                "从模型调用到",
-                <span key="product-line">可审核、可恢复、可交付的 <span className="home-hero-accent">AI 产品。</span></span>,
+                "做过能上线的 AI 产品，",
+                <span key="product-line">不做只会演示的 <span className="home-hero-accent">Demo。</span></span>,
               ]}
             />
             <HeroReveal delay={0.2}>
-              <p className="home-hero-description">{siteConfig.description}</p>
+              <p className="home-hero-description">
+                {siteConfig.description}我关注的是从模型调用、证据溯源到可恢复交付的完整闭环。
+              </p>
             </HeroReveal>
             <HeroReveal className="home-hero-actions" delay={0.27}>
               <a className="button button-primary" href="#projects">
@@ -121,7 +123,7 @@ export default function HomePage() {
               <Reveal key={project.slug} delay={staggerDelay(index)} variant={index === 0 ? "media" : "row"}>
                 <ProjectPreview
                   project={project}
-                  variant={index === 0 ? "wide" : "poster"}
+                  variant={index === 0 ? "lead" : "poster"}
                   showMetrics
                 />
               </Reveal>

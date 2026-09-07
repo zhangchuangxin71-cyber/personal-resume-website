@@ -122,6 +122,14 @@
 .project-preview:hover .project-preview-image { transform: scale(1.045); }
 .project-preview:hover .project-preview-ink { opacity: 0.18; }
 .project-preview-copy { display: grid; align-content: start; gap: 16px; padding-block: 20px 24px; }
+.project-preview-flag {
+  margin: 0;
+  color: var(--text-soft);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .project-preview-status { margin: 0; color: var(--accent); font-family: var(--font-mono); font-size: 10px; }
 .project-preview-heading { display: flex; align-items: start; justify-content: space-between; gap: 22px; }
 .project-preview-heading h3 { margin: 0; font-size: clamp(27px, 3vw, 48px); font-weight: 740; letter-spacing: -0.045em; line-height: 1; }
@@ -148,7 +156,14 @@
 }
 .project-preview-link > :not(.project-preview-spotlight) { position: relative; z-index: 1; }
 .project-preview-poster .project-preview-media { aspect-ratio: 4 / 3; }
-.project-preview-lead .project-preview-media { min-height: 520px; }
+.project-preview-lead .project-preview-link { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr); gap: clamp(30px, 4vw, 68px); }
+.project-preview-lead .project-preview-media { min-height: 560px; }
+.project-preview-lead .project-preview-copy { padding: 30px 0 30px 0; }
+.project-preview-lead .project-preview-heading h3 { font-size: clamp(34px, 4.4vw, 66px); }
+.project-preview-lead .project-preview-subtitle { max-width: 46ch; font-size: 16px; line-height: 1.8; }
+.project-preview-lead .project-preview-metrics { gap: clamp(20px, 3.5vw, 44px); margin-top: 8px; }
+.project-preview-lead .project-preview-metrics strong { font-size: 28px; }
+.project-preview-lead .project-preview-cta { margin-top: 2px; }
 .project-preview-wide .project-preview-link { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr); }
 .project-preview-wide .project-preview-media { min-height: 380px; }
 .project-preview-wide .project-preview-copy { padding: 26px 0 26px clamp(28px, 4vw, 58px); }

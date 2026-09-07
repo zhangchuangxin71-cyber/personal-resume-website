@@ -83,6 +83,9 @@ export function ProjectPreview({
           <span className="media-scanline" aria-hidden="true" />
         </div>
         <div className="project-preview-copy">
+          {variant === "lead" ? (
+            <p className="project-preview-flag">旗舰项目 / Flagship case study</p>
+          ) : null}
           <p className="project-preview-status">
             {statusLabels[project.status]}{project.openSource ? " · 开源" : ""}
           </p>
