@@ -12,11 +12,10 @@ export const siteConfig = {
   githubUrl: process.env.NEXT_PUBLIC_GITHUB_URL ?? "",
   resumePdf: process.env.NEXT_PUBLIC_RESUME_PDF ?? "/resume.pdf",
   nav: [
-    { href: "#top", id: "top", label: "首页" },
-    { href: "#about", id: "about", label: "关于" },
-    { href: "#projects", id: "projects", label: "项目" },
-    { href: "#resume", id: "resume", label: "简历" },
-    { href: "#contact", id: "contact", label: "联系" },
+    { href: "#projects", id: "projects", label: "Work" },
+    { href: "#experience", id: "experience", label: "Experience" },
+    { href: "#resume", id: "resume", label: "CV" },
+    { href: "#contact", id: "contact", label: "Contact" },
   ],
 } as const;
 

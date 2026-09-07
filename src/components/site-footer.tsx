@@ -11,9 +11,10 @@ export function SiteFooter() {
           <p className="footer-note">复杂系统需要清楚的边界，也需要清楚的表达。</p>
         </div>
         <div className="footer-links">
-          <Link href="#projects">项目</Link>
-          <Link href="#resume">简历</Link>
-          <Link href="#contact">联系</Link>
+          <Link href="#projects">Work</Link>
+          <Link href="#experience">Experience</Link>
+          <Link href="#resume">CV</Link>
+          <Link href="#contact">Contact</Link>
           {siteConfig.githubUrl ? (
             <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer">
               GitHub <ArrowUpRight size={13} />
