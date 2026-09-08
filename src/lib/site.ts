@@ -59,17 +59,17 @@ export const internships = [
       {
         title: "企业文档 RAG 智能问答平台",
         body:
-          "基于 MinerU、PageIndex、LangGraph 与 PostgreSQL 构建多格式文档 RAG 平台，编排查询分类、多文档路由、节点树导航与页级证据定位，支持跨文档比较和原文溯源。",
+          "把多格式文档问答做成可追溯的服务，支持页码定位、多文档验证和原文回看。",
       },
       {
         title: "图文与视频多模态检索服务",
         body:
-          "针对代表帧重复与单帧语义覆盖不足，设计分段抽帧、K-Means 多样化选帧与注意力池化，融合 BM25 和稠密向量检索，将视频 Top-1 由 14% 提升至 38%。",
+          "把图文和视频素材统一进一个检索服务，用分段抽帧、稀疏+稠密融合把视频 Top-1 从 14% 提升到 38%。",
       },
       {
         title: "AI 辅助视频生产与智能切片",
         body:
-          "重构文案到成片链路，通过原文内联标记式 Prompt、文本保真校验、动态合并与规则降级统一文本、音频、字幕和画面时序；并基于 FastAPI、FFmpeg/FFprobe 与 OSS 实现在线视频智能切片。",
+          "把文案成片和视频切片做成可预览、可回退的流水线，统一字幕、音频和画面时序。",
       },
     ],
   },
@@ -79,11 +79,11 @@ export const resumeProjects = [
   {
     title: "ClipTalk｜对话式视频剪辑 AI Agent",
     period: "2026.07 - 2026.08",
-    summary: "设计任务感知的 Agent 编排，按任务类型、证据完备度与剪辑目标动态路由 LLM/VLM 和媒体工具。",
+    summary: "把长视频剪辑拆成可审核、可回退的 Agent 流程，支持自然语言驱动的高光定位、时间线编辑和成片导出。",
     achievements: [
-      "构建镜头—事件—成片（Shot-Event-Reel）三级模型，以可追溯的 Evidence Graph 关联 VLM、SenseVoice、OCR、声音事件及匿名人物/说话人等证据",
-      "支持自然语言检索高光、对白、人物、动作与场景",
-      "独立实现 Web、FastAPI 与 FFmpeg 渲染全链路，构建状态化多轨时间线与持久化任务系统",
+      "构建镜头—事件—成片（Shot-Event-Reel）三级模型，用 Evidence Graph 把 VLM、语音、OCR 和声音事件串起来",
+      "支持用自然语言查找高光、对白、人物、动作和场景",
+      "独立实现 Web、FastAPI 与 FFmpeg 全链路，做出状态化多轨时间线和持久化任务系统",
     ],
     technologies: ["Python", "FastAPI", "FFmpeg", "VLM / LLM", "SenseVoice"],
     slug: "videopilot",
@@ -91,11 +91,11 @@ export const resumeProjects = [
   {
     title: "基于 PageIndex 的智能文档问答 RAG 系统",
     period: "2026.03 - 2026.04",
-    summary: "基于 MinerU、PageIndex、LangGraph 与 PostgreSQL 构建多格式文档 RAG 平台，支持跨文档比较和原文溯源。",
+    summary: "基于 PageIndex、Docling 和 PostgreSQL 构建多格式文档问答系统，保留页码证据、层级结构和稳定入库能力。",
     achievements: [
-      "在 119 条人工标注评测集上优化检索策略、Top-K、Prompt 与基座模型，人工评测准确率 42.0% → 84.9%",
-      "50 页 PDF 解析与索引构建耗时 40 秒以内",
-      "支持多文档路由、节点树导航与页级证据定位",
+      "在 119 条人工标注评测集上优化检索策略、Top-K、Prompt 和基座模型，准确率从 42.0% 提升到 84.9%",
+      "50 页 PDF 解析与索引构建控制在 40 秒以内",
+      "支持多文档路由、节点树导航和页级证据定位",
     ],
     technologies: ["PageIndex", "Docling", "PostgreSQL", "FastAPI", "ReAct"],
     slug: "pageindex-rag",
@@ -103,11 +103,11 @@ export const resumeProjects = [
   {
     title: "多模态向量检索与 Embedding 服务平台",
     period: "2026.05",
-    summary: "面向图文和视频素材建立统一检索服务，完成分段抽帧、K-Means 多样化选帧、注意力池化与混合排序。",
+    summary: "把图文和视频素材统一成一个可检索、可排序的 Embedding 服务，支持分段抽帧、混合排序和异步任务管理。",
     achievements: [
-      "视频 Top-1 由 14% 提升至 38%",
+      "视频 Top-1 从 14% 提升到 38%",
       "文搜视频 P95 延迟低于 200 ms",
-      "FAISS 迁移至 Milvus，支持万级视频素材批量入库",
+      "把 FAISS 迁移到 Milvus，支持万级素材批量入库",
     ],
     technologies: ["Chinese-CLIP", "BGE", "BM25", "Milvus", "FastAPI"],
     slug: "multimodal-retrieval",
@@ -115,9 +115,9 @@ export const resumeProjects = [
   {
     title: "文案驱动的 AI 短视频自动化生成平台",
     period: "2026.06 - 2026.07",
-    summary: "重构文案到成片链路，统一文本、音频、字幕和画面时序，解决字幕错位、文本遗漏与语义切分问题。",
+    summary: "把文案、音频、字幕和画面锁在同一条时间轴上，解决错位、漏字和语义切分问题。",
     achievements: [
-      "通过原文内联标记式 Prompt、文本保真校验、动态合并与规则降级解决字幕错位、文本遗漏和语义切分问题",
+      "通过原文内联标记式 Prompt、文本保真校验和规则降级，解决字幕错位和文本遗漏",
       "支持横屏与竖屏两种成片规格",
       "沉淀可预览、可回退的工作区流水线",
     ],
@@ -127,10 +127,10 @@ export const resumeProjects = [
   {
     title: "在线视频切片与智能分镜工具",
     period: "2026.07",
-    summary: "基于 FastAPI、FFmpeg/FFprobe 与 OSS 构建在线视频智能切片服务，支持画面/抗闪检测、VLM 语义分镜与帧级切割。",
+    summary: "把手动打点和自动分镜接到同一条时间线里，支持画面检测、抗闪切镜和语义分镜。",
     achievements: [
       "支持画面检测、抗闪切镜、语义分镜和 Range 预览",
-      "实现并行处理与资源回收",
+      "实现并行处理和资源回收",
       "完成切割、预览和云端导出闭环",
     ],
     technologies: ["FastAPI", "豆包视觉模型", "OSS", "Web Timeline"],
