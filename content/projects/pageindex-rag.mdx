@@ -7,14 +7,14 @@ period: "2026.03 - 2026.04"
 status: "completed"
 featured: true
 order: 2
-summary: "基于 PageIndex、Docling 和 PostgreSQL 搭建多格式文档问答系统，保留页码证据、层级结构和稳定入库能力。"
-problem: "固定切块会破坏章节关系，复杂问题还需要跨节点、跨文档验证；同时，多格式解析、索引耗时和结果溯源必须一起解决，才能形成能被上层业务调用的服务。"
+summary: "我把多格式文档问答做成可溯源的知识库服务：文档被解析为保留层级和页码的节点，Agent 依据结构检索并返回可核验的原文证据。"
+problem: "固定切块会打散章节关系，回答复杂问题时难以跨节点、跨文档验证；如果解析、入库和问答没有稳定的服务边界，准确率和可维护性也无法同时保证。"
 constraints:
   - "统一处理 PDF、Word、PPT 等多格式文档"
   - "问答结果必须能够回到 chunk 原文和具体页码"
   - "同路径文档需要稳定去重，不能重复入库"
   - "文档入库、临时处理和状态查询需要标准化 API"
-approach: "使用 Docling 分格式解析文档，以 PageIndex 构建层级索引；节点原文、摘要和页码写入 PostgreSQL，并通过 FastAPI 暴露入库、状态、临时文档和删除接口。问答侧再接入 ReAct Agent 支持工具调用和多轮交互。"
+approach: "用 Docling 统一多格式解析，用 PageIndex 建立层级索引，把节点原文、摘要和页码持久化到 PostgreSQL，再由 FastAPI 和 ReAct Agent 连接入库、检索与多轮问答。"
 flow:
   - "多格式文档"
   - "Docling 解析"
