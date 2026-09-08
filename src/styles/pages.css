@@ -285,8 +285,19 @@
 .home-about { border-bottom: 1px solid var(--line-strong); }
 .home-projects { border-bottom: 1px solid var(--line-strong); padding-block: clamp(88px, 11vw, 148px); }
 .home-other-work { margin-top: 54px; }
+.home-other-work summary { list-style: none; }
+.home-other-work summary::-webkit-details-marker { display: none; }
 .home-other-work-heading { display: grid; gap: 10px; margin-bottom: 20px; }
+.home-other-work-heading summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+}
 .home-other-work-heading h3 { margin: 0; font-size: 13px; color: var(--accent); font-family: var(--font-mono); font-weight: 500; }
+.home-other-work-heading span { color: var(--text-soft); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.home-other-work:not([open]) .home-other-work-grid { display: none; }
 .home-other-work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .home-other-work-item { display: grid; gap: 10px; min-height: 160px; border-top: 1px solid var(--line-strong); padding: 20px 0 18px; transition: transform 180ms ease, color 180ms ease; }
 .home-other-work-item:hover { transform: translateY(-2px); color: var(--accent); }

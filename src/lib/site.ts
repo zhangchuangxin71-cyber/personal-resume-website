@@ -165,15 +165,15 @@ export const awards = [
 
 export const workingPrinciples = [
   {
-    title: "先定义边界",
-    body: "明确模型可以决定什么，哪些状态必须由确定性代码和用户控制。",
+    title: "Control",
+    body: "先划清模型、代码和用户各自负责的边界，再让 Agent 进入流程。",
   },
   {
-    title: "让结果可验证",
-    body: "保留中间产物、数据来源和失败路径，不把推测包装成结论。",
+    title: "Evidence",
+    body: "保留证据、来源和中间状态，不把推测包装成结论。",
   },
   {
-    title: "从演示走向系统",
-    body: "在原型之后补齐协议、测试、性能与可恢复性，让能力能够稳定复用。",
+    title: "Delivery",
+    body: "原型之外补齐协议、测试、性能和恢复，让能力能持续交付。",
   },
 ] as const;

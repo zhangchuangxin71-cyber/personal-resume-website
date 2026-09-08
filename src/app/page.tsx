@@ -27,7 +27,7 @@ export default function HomePage() {
               <h1 className="home-hero-name">{siteConfig.name}</h1>
             </HeroReveal>
             <HeroReveal delay={0.14}>
-              <p className="home-hero-title">{siteConfig.role}</p>
+              <p className="home-hero-title">把模型能力做成能上线的产品</p>
             </HeroReveal>
             <HeroReveal delay={0.17}>
               <div className="home-hero-inline-contact">
@@ -48,8 +48,7 @@ export default function HomePage() {
               <p className="home-hero-description">
                 我做的是能上线、能验证、能持续交付的 AI 产品，而不是只能演示的{" "}
                 <span className="home-hero-accent">Demo。</span>
-                专注 Agent 原生应用、多模态视频理解与结构化文档检索，把模型能力真正接入产品流程，
-                打通从调用、证据、状态到恢复与交付的完整闭环。
+                专注 Agent 原生应用、多模态视频理解与结构化文档检索，把模型能力接入真实流程。
               </p>
             </HeroReveal>
             <HeroReveal className="home-hero-actions" delay={0.27}>
@@ -143,10 +142,11 @@ export default function HomePage() {
             ))}
           </div>
           {supportingProjects.length ? (
-            <div className="home-other-work">
-              <Reveal className="home-other-work-heading">
+            <details className="home-other-work">
+              <summary className="home-other-work-heading">
                 <h3>其他项目</h3>
-              </Reveal>
+                <span>默认收起</span>
+              </summary>
               <div className="home-other-work-grid">
                 {supportingProjects.map((project, index) => (
                   <Reveal key={project.slug} delay={staggerDelay(index)} variant="row">
@@ -159,7 +159,7 @@ export default function HomePage() {
                   </Reveal>
                 ))}
               </div>
-            </div>
+            </details>
           ) : null}
         </div>
       </section>
