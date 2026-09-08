@@ -37,6 +37,29 @@ export const focusAreas = [
   },
 ] as const;
 
+export const capabilities = [
+  {
+    title: "Agent 系统",
+    description: "让模型进入有边界的产品流程，支持规划、工具调用、人工审核和回退。",
+    items: ["Planning", "Tool calling", "Human review"],
+  },
+  {
+    title: "检索系统",
+    description: "用层级索引、混合召回和证据定位，让答案回到可核验的数据来源。",
+    items: ["RAG", "Hybrid search", "Evidence"],
+  },
+  {
+    title: "多模态 AI",
+    description: "连接文本、图像、视频和语音，把模型输出转成可使用的内容理解结果。",
+    items: ["VLM", "Video", "Embedding"],
+  },
+  {
+    title: "产品工程",
+    description: "补齐 API、异步任务、状态管理、测试和部署，让原型能够持续交付。",
+    items: ["FastAPI", "Async jobs", "Delivery"],
+  },
+] as const;
+
 export const education = [
   {
     school: "西安理工大学",
@@ -81,7 +104,7 @@ export const resumeProjects = [
     period: "2026.07 - 2026.08",
     summary: "把长视频剪辑拆成可审核、可回退的 Agent 流程，支持自然语言驱动的高光定位、时间线编辑和成片导出。",
     achievements: [
-      "构建镜头—事件—成片（Shot-Event-Reel）三级模型，用 Evidence Graph 把 VLM、语音、OCR 和声音事件串起来",
+      "构建镜头-事件-成片（Shot-Event-Reel）三级模型，用 Evidence Graph 把 VLM、语音、OCR 和声音事件串起来",
       "支持用自然语言查找高光、对白、人物、动作和场景",
       "独立实现 Web、FastAPI 与 FFmpeg 全链路，做出状态化多轨时间线和持久化任务系统",
     ],

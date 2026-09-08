@@ -1,23 +1,31 @@
 import Link from "next/link";
-import { ArrowDown, ArrowRight, EnvelopeSimple, GithubLogo } from "@phosphor-icons/react/dist/ssr";
+import {
+  ArrowDown,
+  ArrowRight,
+  BracketsCurly,
+  EnvelopeSimple,
+  GithubLogo,
+  MagnifyingGlass,
+  Package,
+  Robot,
+} from "@phosphor-icons/react/dist/ssr";
 import { HeroSystemField } from "@/components/hero-system-field";
 import { ProjectPreview } from "@/components/project-preview";
-import { HeroAtmosphere } from "@/components/reactbits-effects";
 import { HeroReveal, Reveal } from "@/components/reveal";
 import { PrintButton } from "@/components/print-button";
 import { staggerDelay } from "@/lib/motion";
 import { projects } from "@/lib/projects";
-import { awards, education, internships, resumeProjects, siteConfig, skillGroups, workingPrinciples } from "@/lib/site";
+import { awards, capabilities, education, internships, resumeProjects, siteConfig, skillGroups, workingPrinciples } from "@/lib/site";
 
 const spotlightProjects = projects.slice(0, 3);
 const supportingProjects = projects.slice(3);
 const githubDisplay = siteConfig.githubUrl?.replace(/^https?:\/\//, "") ?? "github.com/zhangchuangxin71-cyber";
+const capabilityIcons = [Robot, MagnifyingGlass, BracketsCurly, Package];
 
 export default function HomePage() {
   return (
     <div className="home-page">
       <section className="home-hero" id="top">
-        <HeroAtmosphere />
         <div className="container-shell home-hero-grid">
           <div className="home-hero-copy">
             <HeroReveal delay={0.02}>
@@ -27,7 +35,7 @@ export default function HomePage() {
               <h1 className="home-hero-name">{siteConfig.name}</h1>
             </HeroReveal>
             <HeroReveal delay={0.14}>
-              <p className="home-hero-title">把模型能力做成能上线的产品</p>
+              <p className="home-hero-title">做能上线的 AI 产品，不做只能演示的 Demo。</p>
             </HeroReveal>
             <HeroReveal delay={0.17}>
               <div className="home-hero-inline-contact">
@@ -46,17 +54,15 @@ export default function HomePage() {
             </HeroReveal>
             <HeroReveal delay={0.2}>
               <p className="home-hero-description">
-                我做的是能上线、能验证、能持续交付的 AI 产品，而不是只能演示的{" "}
-                <span className="home-hero-accent">Demo。</span>
-                专注 Agent 原生应用、多模态视频理解与结构化文档检索，把模型能力接入真实流程。
+                专注 Agent、RAG 与多模态应用，把模型能力接入真实产品流程，做成可验证、可恢复、可持续交付的系统。
               </p>
             </HeroReveal>
             <HeroReveal className="home-hero-actions" delay={0.27}>
               <a className="button button-primary" href="#projects">
-                查看精选项目
+                查看项目
                 <ArrowRight size={17} />
               </a>
-              <a className="button button-secondary" href="#resume">
+              <a className="button button-secondary" href={siteConfig.resumePdf} download>
                 下载简历
                 <ArrowDown size={17} />
               </a>
@@ -66,32 +72,6 @@ export default function HomePage() {
           <Reveal className="home-system-visual" variant="media">
             <HeroSystemField />
           </Reveal>
-        </div>
-      </section>
-
-      <section className="home-proof">
-        <div className="container-shell home-proof-grid">
-          <Reveal className="home-section-heading">
-            <h2>核心证据</h2>
-          </Reveal>
-          <div className="proof-metrics">
-            <div>
-              <strong>42.0% → 84.9%</strong>
-              <span>PageIndex RAG 准确率</span>
-            </div>
-            <div>
-              <strong>14% → 38%</strong>
-              <span>视频检索 Top-1</span>
-            </div>
-            <div>
-              <strong>119</strong>
-              <span>人工标注评测集</span>
-            </div>
-            <div>
-              <strong>3</strong>
-              <span>旗舰项目</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -119,6 +99,32 @@ export default function HomePage() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="home-proof">
+        <div className="container-shell home-proof-grid">
+          <Reveal className="home-section-heading">
+            <h2>核心证据</h2>
+          </Reveal>
+          <div className="proof-metrics">
+            <div>
+              <strong>42.0% → 84.9%</strong>
+              <span>PageIndex RAG 准确率</span>
+            </div>
+            <div>
+              <strong>14% → 38%</strong>
+              <span>视频检索 Top-1</span>
+            </div>
+            <div>
+              <strong>119</strong>
+              <span>人工标注评测集</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>旗舰项目</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -161,6 +167,35 @@ export default function HomePage() {
               </div>
             </details>
           ) : null}
+        </div>
+      </section>
+
+      <section id="capabilities" className="home-capabilities">
+        <div className="container-shell capabilities-layout">
+          <Reveal className="home-section-heading">
+            <h2>能力范围</h2>
+          </Reveal>
+          <div className="capability-grid">
+            {capabilities.map((capability, index) => {
+              const Icon = capabilityIcons[index];
+              return (
+                <Reveal
+                  key={capability.title}
+                  className={`capability-card capability-card-${index + 1}`}
+                  delay={staggerDelay(index)}
+                >
+                  <div className="capability-icon" aria-hidden="true">
+                    <Icon size={24} weight="duotone" />
+                  </div>
+                  <h3>{capability.title}</h3>
+                  <p>{capability.description}</p>
+                  <div className="capability-tags">
+                    {capability.items.map((item) => <span key={item}>{item}</span>)}
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </section>
 

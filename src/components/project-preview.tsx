@@ -93,7 +93,7 @@ export function ProjectPreview({
           <p className="project-preview-status">
             {statusLabels[project.status]}{project.openSource ? " · 开源" : ""}
           </p>
-          <p className="project-preview-hint">点开进入完整案例</p>
+          <p className="project-preview-hint">查看案例</p>
           <div className="project-preview-heading">
             <h3>{project.title}</h3>
             <span aria-hidden="true"><ArrowUpRight size={22} /></span>
