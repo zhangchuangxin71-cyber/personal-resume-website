@@ -226,7 +226,17 @@
   border-color: var(--line-strong);
   background: color-mix(in srgb, var(--surface) 84%, var(--accent) 16%);
 }
-.home-system-visual { min-width: 0; align-self: center; }
+.home-system-visual {
+  min-width: 0;
+  align-self: center;
+  justify-self: end;
+  width: min(100%, 720px);
+  opacity: 0.88;
+}
+
+.home-system-visual .hero-system-field {
+  min-height: 520px;
+}
 
 .home-proof { border-bottom: 1px solid var(--line-strong); padding-block: 38px 90px; }
 .home-proof-grid { display: grid; gap: 28px; }

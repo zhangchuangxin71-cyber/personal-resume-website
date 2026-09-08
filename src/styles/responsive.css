@@ -27,6 +27,8 @@
   .project-hero-copy { grid-template-columns: 1fr; align-items: start; }
   .project-hero-summary { max-width: 620px; }
   .project-layout { grid-template-columns: 150px minmax(0, 1fr); gap: 48px; }
+  .home-system-visual { width: min(100%, 640px); opacity: 0.86; }
+  .home-system-visual .hero-system-field { min-height: 480px; }
   .about-intro { grid-template-columns: 1fr; min-height: auto; }
   .about-cubes-stage { width: min(70vw, 560px); justify-self: end; }
   .resume-section { grid-template-columns: 130px minmax(0, 1fr); gap: 36px; }
@@ -52,9 +54,8 @@
   .home-hero-name { font-size: clamp(42px, 12vw, 68px); line-height: 0.95; }
   .home-hero-title { font-size: clamp(18px, 5.6vw, 26px); margin-top: 12px; }
   .home-hero-description { margin-top: 24px; font-size: 15px; }
-  .home-hero-contact { grid-template-columns: 1fr; }
-  .home-hero-contact-link { width: 100%; }
-  .hero-system-field { min-height: 430px; border-radius: 28px; }
+  .home-system-visual { width: 100%; opacity: 1; justify-self: stretch; }
+  .home-system-visual .hero-system-field { min-height: 430px; border-radius: 28px; }
   .hero-studio { padding: 12px; }
   .hero-studio-stage { border-radius: 24px; }
   .hero-studio-board { padding: 16px; gap: 14px; }
